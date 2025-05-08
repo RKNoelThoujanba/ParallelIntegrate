@@ -17,7 +17,7 @@ public:
         m_StartTime = std::chrono::high_resolution_clock::now();
     }
 
-    std::chrono::duration<double> GetTimeEllapsed(void) const
+    auto GetTimeEllapsed(void) const
     {
         return std::chrono::high_resolution_clock::now() - m_StartTime;
     }

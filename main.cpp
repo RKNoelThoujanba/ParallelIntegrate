@@ -152,6 +152,6 @@ int main(int argc, char** argv)
     std::cout << "Integral = " << integ << "\n";
     
 
-    double duration = std::chrono::duration_cast<std::chrono::milliseconds>(timer.GetTimeEllapsed()).count();
-    std::cout << "Time Ellapsed: " << duration << " ms. \n";
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(timer.GetTimeEllapsed());
+    std::cout << "Time Ellapsed: " << duration.count() << " ms. \n";
 }
